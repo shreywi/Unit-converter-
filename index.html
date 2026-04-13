@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <p class="eyebrow">Smart Converter</p>
+      <h1>Unit Converter</h1>
+    </header>
+
+    <section class="converter-card" aria-label="Unit converter tool">
+      <div class="category-row">
+        <label for="category-select">Category</label>
+        <select id="category-select">
+          <option value="length">Length</option>
+          <option value="weight">Weight</option>
+          <option value="temperature">Temperature</option>
+          <option value="speed">Speed</option>
+          <option value="currency">Currency</option>
+        </select>
+      </div>
+
+      <div class="converter-grid">
+        <article class="input-card" aria-label="From conversion input">
+          <p class="input-label">From Value</p>
+          <input id="from-value" type="number" step="any" placeholder="Enter value" />
+          <select id="from-unit"></select>
+        </article>
+
+        <button id="swap-btn" class="swap-btn" type="button" aria-label="Swap units">
+          Swap Units
+        </button>
+
+        <article class="input-card" aria-label="Converted value input">
+          <p class="input-label">Converted Value</p>
+          <input id="to-value" type="number" step="any" placeholder="Converted value" />
+          <select id="to-unit"></select>
+        </article>
+      </div>
+
+      <p id="status" class="status" role="status">Ready</p>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
